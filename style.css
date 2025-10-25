@@ -1,70 +1,135 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #111;
+/* RESET BASIQUE */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
+body {
+  line-height: 1.6;
+  background-color: #f5f6fa;
+  color: #333;
+}
+
+/* HEADER */
 header {
-  background-color: #004080;
-  color: white;
-  padding: 30px;
   text-align: center;
+  padding: 40px 20px 20px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+  border: 4px solid #fff;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  margin-bottom: 10px;
 }
 
 .btn-cv {
   display: inline-block;
-  background-color: #006699;
-  color: white;
+  background-color: #fff;
+  color: #1e90ff;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
+
 .btn-cv:hover {
-  background-color: #005580;
+  background-color: #f0f0f0;
 }
 
+/* NAVIGATION */
 nav {
-  background-color: #006699;
+  background-color: #f1f3f6;
+  padding: 10px 0;
   text-align: center;
-  padding: 10px;
+  margin-bottom: 20px;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
 nav a {
-  color: white;
-  margin: 0 15px;
   text-decoration: none;
+  color: #1e90ff;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-section {
-  padding: 40px;
+nav a:hover {
+  color: #0b63c4;
+}
+
+/* SECTIONS */
+main {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-h1, h2 {
-  color: #004080;
-}
-
-ul {
-  line-height: 1.8;
+h2 {
+  margin-bottom: 20px;
+  color: #1e90ff;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 5px;
 }
 
 .project {
-  background-color: #f0f8ff;
-  padding: 20px;
   margin-bottom: 20px;
-  border-left: 5px solid #38ada9;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
 footer {
-  background-color: #004080;
-  color: white;
   text-align: center;
   padding: 20px;
+  background-color: #1e90ff;
+  color: #fff;
   margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
