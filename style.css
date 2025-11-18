@@ -15,14 +15,14 @@ body {
 /* HEADER */
 header {
   text-align: center;
-  padding: 40px 20px 30px 20px;
+  padding: 30px 20px;
   background-color: #1e90ff;
   color: #fff;
 }
 
 .profile-photo {
-  width: 50px;         /* Taille très petite comme photo CV */
-  height: 50px;
+  width: 60px;         /* Taille petite CV */
+  height: 60px;
   border-radius: 50%;
   display: block;
   margin: 0 auto 15px auto;
@@ -31,20 +31,20 @@ header {
 }
 
 header h1 {
-  margin-bottom: 10px;
-  font-size: 2em;
+  margin-bottom: 5px;
+  font-size: 1.8em;
 }
 
 header p {
-  margin-bottom: 10px;
-  font-size: 1em;
+  margin-bottom: 5px;
+  font-size: 0.95em;
 }
 
 .btn-cv {
   display: inline-block;
   background-color: #fff;
   color: #1e90ff;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -133,14 +133,45 @@ footer {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .profile-photo {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+
+  .btn-cv {
+    padding: 6px 12px;
+    font-size: 0.85em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .profile-photo {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  header p {
+    font-size: 0.8em;
+  }
+
+  .btn-cv {
+    padding: 5px 10px;
+    font-size: 0.8em;
   }
 }
