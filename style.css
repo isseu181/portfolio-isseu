@@ -1,53 +1,46 @@
-/* RESET BASIQUE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-body {
-  line-height: 1.6;
-  background-color: #f5f6fa;
-  color: #333;
-}
-
-/* HEADER */
+/* HEADER COMPACT */
 header {
-  text-align: center;
-  padding: 30px 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   background-color: #1e90ff;
   color: #fff;
 }
 
 .profile-photo {
-  width: 60px;         /* Taille petite CV */
-  height: 60px;
+  width: 120px; /* desktop */
+  height: 120px;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px auto;
-  border: 3px solid #fff;
   object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
 }
 
+/* Texte du header */
 header h1 {
-  margin-bottom: 5px;
   font-size: 1.8em;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 header p {
-  margin-bottom: 5px;
+  text-align: center;
   font-size: 0.95em;
+  margin-bottom: 5px;
 }
 
+/* Bouton CV */
 .btn-cv {
   display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.85em;
+  border-radius: 5px;
   background-color: #fff;
   color: #1e90ff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -56,122 +49,33 @@ header p {
   color: #0b63c4;
 }
 
-/* NAVIGATION */
-nav {
-  background-color: #f1f3f6;
-  padding: 10px 0;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #1e90ff;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #0b63c4;
-}
-
-/* SECTIONS */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h2 {
-  margin-bottom: 20px;
-  color: #1e90ff;
-  border-bottom: 2px solid #1e90ff;
-  padding-bottom: 5px;
-}
-
-.project {
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.project h3 {
-  margin-bottom: 10px;
-}
-
-.project a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1e90ff;
-  color: #fff;
-  margin-top: 40px;
-}
-
-/* RESPONSIVE */
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .profile-photo {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
   }
 
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   header p {
-    font-size: 0.9em;
-  }
-
-  .btn-cv {
-    padding: 6px 12px;
     font-size: 0.85em;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .profile-photo {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
   }
 
   header h1 {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   header p {
-    font-size: 0.8em;
-  }
-
-  .btn-cv {
-    padding: 5px 10px;
     font-size: 0.8em;
   }
 }
