@@ -1,192 +1,97 @@
-/* ===== RESET ===== */
-* {
+/* --- GLOBAL --- */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
-body {
-  line-height: 1.6;
-  background-color: #f5f6fa;
+  background: #f5f5f5;
   color: #333;
 }
 
-/* ============================================================
-   HEADER STYLE CV
-============================================================== */
-.cv-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #1e90ff;
-  color: #fff;
-  padding: 25px 15px;
+/* --- HEADER --- */
+header {
   text-align: center;
+  padding: 40px 20px;
+  background: #004aad;
+  color: white;
 }
 
+/* PHOTO STYLE CV PETITE */
 .profile-photo {
-  width: 80px;   /* Taille CV */
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: block;
+  margin: 0 auto 15px auto;
   object-fit: cover;
-  border: 3px solid #fff;
-  margin-bottom: 12px;
+  border: 3px solid white;
 }
 
-.cv-header h1 {
-  font-size: 1.8em;
-  margin-bottom: 8px;
-}
-
-.cv-header p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-/* === Bouton CV === */
+/* BOUTON CV */
 .btn-cv {
   display: inline-block;
-  background-color: #fff;
-  color: #1e90ff;
-  padding: 8px 16px;
+  padding: 10px 18px;
+  background: white;
+  color: #004aad;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-.btn-cv:hover {
-  background-color: #f0f0f0;
-  color: #0b63c4;
-}
-
-/* ============================================================
-   NAVIGATION
-============================================================== */
-nav {
-  background-color: #f1f3f6;
-  padding: 10px 0;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+/* NAVIGATION */
 nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  padding: 15px;
 }
 
 nav a {
   text-decoration: none;
-  color: #1e90ff;
+  color: #004aad;
   font-weight: bold;
-  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #0b63c4;
-}
-
-/* ============================================================
-   MAIN CONTENT
-============================================================== */
+/* SECTIONS */
 main {
-  max-width: 900px;
-  margin: 0 auto;
   padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 h2 {
-  margin-bottom: 20px;
-  color: #1e90ff;
-  border-bottom: 2px solid #1e90ff;
-  padding-bottom: 5px;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+  color: #004aad;
 }
 
-/* --- Projets / Cards --- */
 .project {
-  margin-bottom: 20px;
+  background: #fff;
   padding: 15px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border-left: 4px solid #004aad;
 }
 
-.project h3 {
-  margin-bottom: 10px;
-}
-
-.project a {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.project a:hover {
-  text-decoration: underline;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-/* ============================================================
-   FOOTER
-============================================================== */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #1e90ff;
-  color: #fff;
-  margin-top: 40px;
+  background: #004aad;
+  color: white;
 }
 
-/* ============================================================
-   RESPONSIVE DESIGN
-============================================================== */
-@media (max-width: 768px) {
-  .profile-photo {
-    width: 65px;
-    height: 65px;
-  }
-
-  .cv-header h1 {
-    font-size: 1.6em;
-  }
-
-  .cv-header p {
-    font-size: 0.95em;
-  }
-
-  .btn-cv {
-    padding: 6px 12px;
-    font-size: 0.85em;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-@media (max-width: 480px) {
+/* --- RESPONSIVE POUR TELEPHONE --- */
+@media (max-width: 600px) {
   .profile-photo {
     width: 55px;
     height: 55px;
   }
 
-  .cv-header h1 {
-    font-size: 1.4em;
-  }
-
-  .cv-header p {
-    font-size: 0.9em;
-  }
-
-  .btn-cv {
-    padding: 6px 12px;
-    font-size: 0.8em;
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
 }
