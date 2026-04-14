@@ -5,6 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio – Isseu GUEYE</title>
   <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      background: #0a66c2;
+      color: white;
+    }
+
+    .profile-photo {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .btn-cv {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: white;
+      color: #0a66c2;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #222;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #0a66c2;
+      padding-bottom: 5px;
+    }
+
+    .project {
+      background: white;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .project a {
+      color: #0a66c2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
@@ -14,7 +106,7 @@
     <img src="assets/photo.jpg" alt="Photo d'Isseu GUEYE" class="profile-photo">
 
     <h1>Isseu GUEYE</h1>
-    <p>Titulaire d'un Master  – Statistique & Informatique Décisionnelle</p>
+    <p>Data Scientist | Analyste BI | Machine Learning</p>
 
     <a class="btn-cv" 
        href="https://drive.google.com/file/d/1koVYjceD12JjLzcKuMW7xvUdouEkRoyZ/view?usp=sharing" 
@@ -36,8 +128,31 @@
   <!-- CONTENU -->
   <main>
 
+    <!-- PROJETS -->
     <section id="projets">
       <h2>💻 Projets</h2>
+
+      <!-- NOUVEAU PROJET -->
+      <article class="project">
+        <h3>Prédiction de l'évolution de l'état de santé des patients aux urgences</h3>
+
+        <p>
+          Développement d’un modèle prédictif permettant d’anticiper l’évolution clinique des patients admis aux urgences.
+        </p>
+
+        <ul>
+          <li>Analyse exploratoire des données médicales</li>
+          <li>Nettoyage et préparation des données</li>
+          <li>Modélisation Machine Learning</li>
+          <li>Évaluation des performances</li>
+        </ul>
+
+        <p><strong>Technologies :</strong> Python, Pandas, Scikit-learn, Matplotlib</p>
+
+        <a href="https://github.com/isseu181/Pr-diction-de-l-volution-de-l-tat-de-sant-des-patients-admis-aux-urgences" target="_blank">
+          🔗 Voir le projet
+        </a>
+      </article>
 
       <article class="project">
         <h3>Biostat Streamlit</h3>
@@ -58,8 +173,10 @@
         <p>Projet Machine Learning.</p>
         <a href="https://github.com/isseu181/Examen_MLG" target="_blank">🔗 GitHub</a>
       </article>
+
     </section>
 
+    <!-- COMPETENCES -->
     <section id="competences">
       <h2>🧠 Compétences</h2>
       <ul>
@@ -70,6 +187,7 @@
       </ul>
     </section>
 
+    <!-- PARCOURS -->
     <section id="parcours">
       <h2>🎓 Parcours</h2>
       <ul>
@@ -82,6 +200,7 @@
       </ul>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <h2>📬 Contact</h2>
       <p>Email : <a href="mailto:isseugueye219@gmail.com">isseugueye219@gmail.com</a></p>
