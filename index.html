@@ -1,216 +1,771 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio – Isseu GUEYE</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isseu GUEYE | Data Scientist</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #333;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    header {
-      text-align: center;
-      padding: 30px;
-      background: #0a66c2;
-      color: white;
+    body{
+      font-family:'Inter',sans-serif;
+      background:#020617;
+      color:white;
+      overflow-x:hidden;
     }
 
-    .profile-photo {
-      width: 120px;
-      border-radius: 50%;
-      margin-bottom: 10px;
+    /* SCROLL BAR */
+
+    ::-webkit-scrollbar{
+      width:8px;
     }
 
-    .btn-cv {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: white;
-      color: #0a66c2;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+    ::-webkit-scrollbar-thumb{
+      background:#38bdf8;
+      border-radius:10px;
     }
 
-    nav {
-      background: #222;
-      padding: 10px;
+    /* BACKGROUND */
+
+    .bg-blur{
+      position:fixed;
+      width:500px;
+      height:500px;
+      border-radius:50%;
+      background:#0ea5e9;
+      filter:blur(140px);
+      opacity:0.15;
+      z-index:-1;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
+    .bg1{
+      top:-150px;
+      left:-150px;
     }
 
-    nav ul li {
-      margin: 0 15px;
+    .bg2{
+      bottom:-150px;
+      right:-150px;
+      background:#8b5cf6;
     }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+    /* NAVBAR */
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      backdrop-filter:blur(15px);
+      background:rgba(2,6,23,0.7);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      z-index:1000;
     }
 
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      color:#38bdf8;
     }
 
-    section {
-      margin-bottom: 40px;
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
     }
 
-    h2 {
-      border-bottom: 2px solid #0a66c2;
-      padding-bottom: 5px;
+    nav ul li a{
+      color:#cbd5e1;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
     }
 
-    .project {
-      background: white;
-      padding: 15px;
-      margin-top: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    nav ul li a:hover{
+      color:#38bdf8;
     }
 
-    .project a {
-      color: #0a66c2;
-      text-decoration: none;
-      font-weight: bold;
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:120px 8%;
+      gap:60px;
+      flex-wrap:wrap;
     }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #222;
-      color: white;
+    .hero-text{
+      flex:1;
+      min-width:300px;
+      animation:fadeUp 1s ease;
     }
+
+    .hero-text h3{
+      color:#38bdf8;
+      font-size:22px;
+      margin-bottom:15px;
+    }
+
+    .hero-text h1{
+      font-size:75px;
+      line-height:1.1;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .hero-text p{
+      color:#94a3b8;
+      font-size:18px;
+      max-width:650px;
+      margin-bottom:35px;
+      line-height:1.8;
+    }
+
+    .hero-btns{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border-radius:14px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.4s;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+      color:#020617;
+      box-shadow:0 10px 30px rgba(56,189,248,0.35);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-5px);
+    }
+
+    .btn-outline{
+      border:1px solid #38bdf8;
+      color:#38bdf8;
+    }
+
+    .btn-outline:hover{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      min-width:300px;
+      animation:float 4s ease-in-out infinite;
+    }
+
+    .hero-image img{
+      width:370px;
+      height:370px;
+      object-fit:cover;
+      border-radius:30px;
+      border:2px solid rgba(255,255,255,0.1);
+      box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:110px 8%;
+    }
+
+    .section-title{
+      font-size:48px;
+      text-align:center;
+      margin-bottom:70px;
+      font-weight:800;
+    }
+
+    .section-title span{
+      color:#38bdf8;
+    }
+
+    /* ABOUT */
+
+    .about-box{
+      background:rgba(15,23,42,0.75);
+      border:1px solid rgba(255,255,255,0.05);
+      padding:40px;
+      border-radius:30px;
+      backdrop-filter:blur(10px);
+    }
+
+    .about-box p{
+      color:#cbd5e1;
+      line-height:1.9;
+      font-size:17px;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:rgba(15,23,42,0.8);
+      border-radius:25px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.5s;
+      backdrop-filter:blur(10px);
+    }
+
+    .project-card:hover{
+      transform:translateY(-12px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .project-content{
+      padding:30px;
+    }
+
+    .project-content h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+      font-size:24px;
+    }
+
+    .project-content p{
+      color:#94a3b8;
+      margin-bottom:20px;
+      line-height:1.7;
+    }
+
+    .tech{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:25px;
+    }
+
+    .tech span{
+      background:#0f172a;
+      color:#38bdf8;
+      padding:8px 14px;
+      border-radius:50px;
+      font-size:13px;
+    }
+
+    .project-links{
+      display:flex;
+      gap:15px;
+    }
+
+    .project-links a{
+      color:#38bdf8;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* SKILLS */
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-card{
+      background:rgba(15,23,42,0.8);
+      padding:35px;
+      border-radius:25px;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.4s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .skill-card i{
+      font-size:40px;
+      color:#38bdf8;
+      margin-bottom:20px;
+    }
+
+    .skill-card h3{
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .skill-card p{
+      color:#94a3b8;
+      line-height:1.7;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      text-align:center;
+      background:rgba(15,23,42,0.8);
+      padding:50px;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .contact-box p{
+      color:#cbd5e1;
+      margin:15px 0;
+      font-size:18px;
+    }
+
+    .socials{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+    }
+
+    .socials a{
+      width:60px;
+      height:60px;
+      border-radius:20px;
+      background:#0f172a;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:#38bdf8;
+      font-size:24px;
+      transition:0.4s;
+    }
+
+    .socials a:hover{
+      background:#38bdf8;
+      color:#020617;
+      transform:translateY(-6px);
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#64748b;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-20px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .hero-text h1{
+        font-size:55px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .hero-text h1{
+        font-size:42px;
+      }
+
+      .section-title{
+        font-size:36px;
+      }
+
+      .hero-image img{
+        width:300px;
+        height:300px;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="assets/photo.jpg" alt="Photo d'Isseu GUEYE" class="profile-photo">
+  <!-- BLUR BACKGROUND -->
 
-    <h1>Isseu GUEYE</h1>
-    <p>Data Scientist | Analyste BI | Machine Learning</p>
+  <div class="bg-blur bg1"></div>
+  <div class="bg-blur bg2"></div>
 
-    <a class="btn-cv" 
-       href="https://drive.google.com/file/d/1koVYjceD12JjLzcKuMW7xvUdouEkRoyZ/view?usp=sharing" 
-       target="_blank">
-      📄 Voir / Télécharger mon CV
-    </a>
-  </header>
+  <!-- NAVBAR -->
 
-  <!-- NAVIGATION -->
   <nav>
+
+    <div class="logo">Isseu.</div>
+
     <ul>
-      <li><a href="#projets">Projets</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#about">Accueil</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Compétences</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
   </nav>
 
-  <!-- CONTENU -->
-  <main>
+  <!-- HERO -->
 
-    <!-- PROJETS -->
-    <section id="projets">
-      <h2>💻 Projets</h2>
+  <section class="hero" id="about">
 
-      <!-- NOUVEAU PROJET -->
-      <article class="project">
-        <h3>Prédiction de l'évolution de l'état de santé des patients aux urgences</h3>
+    <div class="hero-text">
+
+      <h3>DATA SCIENTIST • BI ANALYST</h3>
+
+      <h1>
+        Isseu <br>
+        GUEYE
+      </h1>
+
+      <p>
+        Titulaire d'un Master Statistique et Informatique Décisionnelle,
+        passionnée par la Data Science, le Machine Learning,
+        l’Intelligence Artificielle et la Business Intelligence.
+        Je développe des applications intelligentes et des solutions
+        basées sur les données.
+      </p>
+
+      <div class="hero-btns">
+
+        <a href="https://drive.google.com/file/d/1koVYjceD12JjLzcKuMW7xvUdouEkRoyZ/view?usp=sharing"
+           target="_blank"
+           class="btn btn-primary">
+          Télécharger CV
+        </a>
+
+        <a href="#projects" class="btn btn-outline">
+          Voir mes projets
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/photo.jpg" alt="Isseu GUEYE">
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section>
+
+    <h2 class="section-title">
+      À propos <span>de moi</span>
+    </h2>
+
+    <div class="about-box">
+
+      <p>
+        Je suis passionnée par l’analyse de données,
+        le développement d’applications et la création
+        de solutions intelligentes à forte valeur ajoutée.
+        Mon parcours en Statistique et Informatique Décisionnelle
+        m’a permis d’acquérir des compétences solides en
+        Machine Learning, visualisation de données,
+        Business Intelligence et développement web.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="section-title">
+      Mes <span>Projets</span>
+    </h2>
+
+    <div class="projects-grid">
+
+      <!-- PROJECT -->
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <h3>Prédiction Santé Urgences</h3>
+
+          <p>
+            Modèle prédictif permettant d’anticiper
+            l’évolution clinique des patients admis aux urgences.
+          </p>
+
+          <div class="tech">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Scikit-learn</span>
+            <span>Streamlit</span>
+          </div>
+
+          <div class="project-links">
+
+            <a href="https://github.com/isseu181/Pr-diction-de-l-volution-de-l-tat-de-sant-des-patients-admis-aux-urgences"
+               target="_blank">
+              GitHub
+            </a>
+
+            <a href="https://hplliuquqsk65rfgz6mwcq.streamlit.app/"
+               target="_blank">
+              Live Demo
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT -->
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <h3>Biostat Streamlit</h3>
+
+          <p>
+            Application interactive d’analyse statistique
+            et de visualisation de données.
+          </p>
+
+          <div class="tech">
+            <span>Python</span>
+            <span>Statistics</span>
+            <span>Visualization</span>
+          </div>
+
+          <div class="project-links">
+
+            <a href="https://github.com/isseu181/biostat-streamlit"
+               target="_blank">
+              GitHub
+            </a>
+
+            <a href="https://biostat-app-evjqgbqhl5g3hci5mt4zte.streamlit.app/"
+               target="_blank">
+              Live Demo
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT -->
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <h3>Examen Data Mining</h3>
+
+          <p>
+            Projet d’analyse de données et de modélisation
+            utilisant des techniques de Data Mining.
+          </p>
+
+          <div class="tech">
+            <span>Data Mining</span>
+            <span>ML</span>
+            <span>Python</span>
+          </div>
+
+          <div class="project-links">
+
+            <a href="https://github.com/isseu181/Examen_DataMining"
+               target="_blank">
+              GitHub
+            </a>
+
+            <a href="https://examendatamining-yfudgmtkgabexuwxh4aftf.streamlit.app/"
+               target="_blank">
+              Live Demo
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2 class="section-title">
+      Mes <span>Compétences</span>
+    </h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>Data Science</h3>
 
         <p>
-          Développement d’un modèle prédictif permettant d’anticiper l’évolution clinique des patients admis aux urgences.
+          Analyse de données, Machine Learning,
+          statistiques et modélisation prédictive.
         </p>
 
-        <ul>
-          <li>Analyse exploratoire des données médicales</li>
-          <li>Nettoyage et préparation des données</li>
-          <li>Modélisation Machine Learning</li>
-          <li>Évaluation des performances</li>
-        </ul>
+      </div>
 
-        <p><strong>Technologies :</strong> Python, Pandas, Scikit-learn, Matplotlib</p>
+      <div class="skill-card">
 
-        <a href="https://github.com/isseu181/Pr-diction-de-l-volution-de-l-tat-de-sant-des-patients-admis-aux-urgences" target="_blank">🔗 GitHub</a> |
-        <a href="https://hplliuquqsk65rfgz6mwcq.streamlit.app/" target="_blank">🌐 Application</a>
-      </article>
+        <i class="fa-solid fa-database"></i>
 
-      <article class="project">
-        <h3>Biostat Streamlit</h3>
-        <p>Application interactive d’analyse statistique.</p>
-        <a href="https://github.com/isseu181/biostat-streamlit" target="_blank">🔗 GitHub</a> |
-        <a href="https://biostat-app-evjqgbqhl5g3hci5mt4zte.streamlit.app/" target="_blank">🌐 Application</a>
-      </article>
+        <h3>Business Intelligence</h3>
 
-      <article class="project">
-        <h3>Examen Data Mining</h3>
-        <p>Analyse et modélisation de données.</p>
-        <a href="https://github.com/isseu181/Examen_DataMining" target="_blank">🔗 GitHub</a> |
-        <a href="https://examendatamining-yfudgmtkgabexuwxh4aftf.streamlit.app/" target="_blank">🌐 Application</a>
-      </article>
+        <p>
+          Power BI, Tableau, reporting,
+          tableaux de bord et visualisation.
+        </p>
 
-      <article class="project">
-        <h3>Examen MLG</h3>
-        <p>Projet Machine Learning.</p>
-        <a href="https://github.com/isseu181/Examen_MLG" target="_blank">🔗 GitHub</a>
-      </article>
+      </div>
 
-    </section>
+      <div class="skill-card">
 
-    <!-- COMPETENCES -->
-    <section id="competences">
-      <h2>🧠 Compétences</h2>
-      <ul>
-        <li><strong>Statistiques :</strong> estimation, tests, séries temporelles</li>
-        <li><strong>Langages :</strong> Python, R, SQL, Java, C++, HTML/CSS, PHP, Django</li>
-        <li><strong>BI :</strong> Power BI, Tableau, SPSS, Excel</li>
-        <li><strong>Bases de données :</strong> MySQL, PostgreSQL</li>
-      </ul>
-    </section>
+        <i class="fa-solid fa-code"></i>
 
-    <!-- PARCOURS -->
-    <section id="parcours">
-      <h2>🎓 Parcours</h2>
-      <ul>
-        <li>Master 2 SID – UADB (2024–2025)</li>
-        <li>Stage – Centre Hospitalier National CAK (2025)</li>
-        <li>Chef Contrôleur – RGPH-5 (2023)</li>
-        <li>Stage – SRSD Louga (2022)</li>
-        <li>IA pour Tous (FORCE-N, 2024)</li>
-        <li>AGCCI Coding Camp (2025)</li>
-      </ul>
-    </section>
+        <h3>Développement</h3>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>📬 Contact</h2>
-      <p>Email : <a href="mailto:isseugueye219@gmail.com">isseugueye219@gmail.com</a></p>
-      <p>LinkedIn : <a href="https://www.linkedin.com/in/isseu-gueye" target="_blank">linkedin.com/in/isseu-gueye</a></p>
-      <p>GitHub : <a href="https://github.com/isseu181" target="_blank">github.com/isseu181</a></p>
-    </section>
+        <p>
+          HTML, CSS, JavaScript,
+          Django, PHP et applications web.
+        </p>
 
-  </main>
+      </div>
+
+      <div class="skill-card">
+
+        <i class="fa-solid fa-server"></i>
+
+        <h3>Bases de données</h3>
+
+        <p>
+          SQL, PostgreSQL, MySQL
+          et gestion des données.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="section-title">
+      Me <span>Contacter</span>
+    </h2>
+
+    <div class="contact-box">
+
+      <p>
+        📧 isseugueye219@gmail.com
+      </p>
+
+      <p>
+        📍 Sénégal
+      </p>
+
+      <div class="socials">
+
+        <a href="https://github.com/isseu181" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/isseu-gueye"
+           target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:isseugueye219@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
   <footer>
-    <p>&copy; 2026 Isseu GUEYE – Tous droits réservés</p>
+    © 2026 Isseu GUEYE • Portfolio Data Scientist
   </footer>
 
 </body>
